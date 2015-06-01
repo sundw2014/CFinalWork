@@ -48,7 +48,9 @@ MainWindow::~MainWindow()
 
        tempNode=(WorkerInfo *)malloc(sizeof(WorkerInfo));
        QTextCodec *textcod = QTextCodec::codecForName("GBK");
-       std::string string1 = textcod ->fromUnicode(ui->lineEdit->text());
+       std::string string1;
+
+       string1 = textcod ->fromUnicode(ui->lineEdit->text());
        length=string1.copy(tempNode->name,string1.size(),0);
        tempNode->name[length]='\0';
 
@@ -111,7 +113,10 @@ MainWindow::~MainWindow()
                  tempNode->jobID=8;
        if(!strcmp(tempNode->job,textcod ->fromUnicode("后勤")))
                  tempNode->jobID=9;
-       qDebug("%d",tempNode->jobID);
+
+//       if(!strcmp(tempNode->job,textcod ->fromUnicode(ui->lineEdit->text())))
+//           qDebug("okokok++++++++++++++++++++++++++++++");
+       //qDebug("%d",tempNode->jobID);
 
 //   switch (tempNode->job)
 //   {
@@ -149,9 +154,9 @@ MainWindow::~MainWindow()
 //            //@@@@@@@@@@@@@flag=0
 //            break;
 //   }
-    switch (WriteToFile(tempNode)) {
+    switch (WriteToFile1(tempNode)) {
     case 3:
-       // ui->label_16->setText("写入成功");
+        ui->label_16->setText("写入成功");
         break;
     case 2:
         ui->label_16->setText("文件无法打开");
@@ -175,4 +180,98 @@ void MainWindow::on_pushButton_2_clicked()
     ui->lineEdit_5->clear();
     ui->lineEdit_6->clear();
     ui->lineEdit_7->clear();
+}
+
+void MainWindow::on_pushButton_4_clicked()
+{
+
+    //Flags
+    unsigned char Flag;
+
+    //
+    QString temp;
+    WorkerInfo *currentWorker;
+    int workerCNT=0;
+
+    //used to process string
+    currentWorker=(WorkerInfo *)malloc(sizeof(WorkerInfo));
+    QTextCodec *textcod = QTextCodec::codecForName("GBK");
+//    std::string string1;
+
+    searchFlag=0x00;
+
+    temp=ui->lineEdit_8->text();
+    if(temp.isEmpty())
+        searchFlag|=NameFlag;
+    temp=ui->lineEdit_9->text();
+    if(temp.isEmpty())
+        searchFlag|=JobFlag;
+    temp=ui->lineEdit_10->text();
+    if(temp.isEmpty())
+        searchFlag|=GenderFlag;
+    temp=ui->lineEdit_11->text();
+    if(temp.isEmpty())
+        searchFlag|=AgeFlag;
+    temp=ui->lineEdit_12->text();
+    if(temp.isEmpty())
+        searchFlag|=DegreeFlag;
+    temp=ui->lineEdit_13->text();
+    if(temp.isEmpty())
+        searchFlag|=MajorFlag;
+    temp=ui->lineEdit_14->text();
+    if(temp.isEmpty())
+        searchFlag|=NumFlag;
+
+    currentWorker=(WorkerInfo *)malloc(sizeof(WorkerInfo));
+    ui->label_15->setText("");
+    qDebug("searchFlag=%d",searchFlag);
+    while(1)
+    {
+        Flag=searchFlag;
+        unsigned char status;
+        if((status=ReadFromFile1(currentWorker,workerCNT))==2)
+        {
+            ui->label_15->setText(ui->label_15->text()+"文件打开失败");
+            break;
+        }
+        else if(status==1)
+        {
+            ui->label_15->setText(ui->label_15->text()+"end");
+            break;
+        }
+        if(!(searchFlag & NameFlag))
+            if(!strcmp(currentWorker->name,textcod ->fromUnicode(ui->lineEdit_8->text())))
+                  Flag|=NameFlag;
+        qDebug("%d",Flag);
+        if(!(searchFlag & JobFlag))
+            if(!strcmp(currentWorker->job,textcod ->fromUnicode(ui->lineEdit_9->text())))
+                  Flag|=JobFlag;
+        qDebug("%d",Flag);
+        if(!(searchFlag & GenderFlag))
+            if(!strcmp(currentWorker->gender,textcod ->fromUnicode(ui->lineEdit_10->text())))
+                  Flag|=GenderFlag;
+        qDebug("%d",Flag);
+        if(!(searchFlag & AgeFlag))
+            if(!strcmp(currentWorker->age,textcod ->fromUnicode(ui->lineEdit_11->text())))
+                  Flag|=AgeFlag;
+        qDebug("%d",Flag);
+        if(!(searchFlag & DegreeFlag))
+            if(!strcmp(currentWorker->degree,textcod ->fromUnicode(ui->lineEdit_12->text())))
+                  Flag|=DegreeFlag;
+        qDebug("%d",Flag);
+        if(!(searchFlag & MajorFlag))
+            if(!strcmp(currentWorker->major,textcod ->fromUnicode(ui->lineEdit_13->text())))
+                  Flag|=MajorFlag;
+        qDebug("%d",Flag);
+        if(!(searchFlag & NumFlag))
+            if(!strcmp(currentWorker->num,textcod ->fromUnicode(ui->lineEdit_14->text())))
+                  Flag|=NumFlag;
+        qDebug("%d",Flag);
+        if(Flag==0x7F)
+        ui->label_15->setText(ui->label_15->text()+textcod->toUnicode(currentWorker->name)+textcod->toUnicode(currentWorker->job)+textcod->toUnicode(currentWorker->gender)+textcod->toUnicode(currentWorker->age)+textcod->toUnicode(currentWorker->degree)+textcod->toUnicode(currentWorker->major)+textcod->toUnicode(currentWorker->num)+'\n');
+        workerCNT++;
+    }
+    free(currentWorker);
+//    ui->pushButton_5->setEnabled(true);
+//    ui->label_15->setText("123");
 }

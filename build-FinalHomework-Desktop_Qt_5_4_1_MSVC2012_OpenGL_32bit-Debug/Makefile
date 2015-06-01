@@ -178,6 +178,7 @@ Makefile: ..\FinalHomework\FinalHomework.pro D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\m
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\mkspecs\features\resolve_config.prf \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\mkspecs\features\exclusive_builds_post.prf \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\mkspecs\features\default_post.prf \
+		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\mkspecs\features\win32\console.prf \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\mkspecs\features\win32\rtti.prf \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\mkspecs\features\precompile_header.prf \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\mkspecs\features\warn_on.prf \
@@ -186,14 +187,11 @@ Makefile: ..\FinalHomework\FinalHomework.pro D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\m
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\mkspecs\features\moc.prf \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\mkspecs\features\win32\opengl.prf \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\mkspecs\features\uic.prf \
-		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\mkspecs\features\win32\windows.prf \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\mkspecs\features\testcase_targets.prf \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\mkspecs\features\exceptions.prf \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\mkspecs\features\yacc.prf \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\mkspecs\features\lex.prf \
 		..\FinalHomework\FinalHomework.pro \
-		D:/Qt/Qt5.4.1/5.4/msvc2012_opengl/lib/qtmaind.prl \
-		D:/Qt/Qt5.4.1/5.4/msvc2012_opengl/lib/Qt5Cored.prl \
 		D:/Qt/Qt5.4.1/5.4/msvc2012_opengl/lib/Qt5Widgets.prl \
 		D:/Qt/Qt5.4.1/5.4/msvc2012_opengl/lib/Qt5Gui.prl \
 		D:/Qt/Qt5.4.1/5.4/msvc2012_opengl/lib/Qt5Core.prl
@@ -303,6 +301,7 @@ D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\mkspecs\features\win32\default_pre.prf:
 D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\mkspecs\features\resolve_config.prf:
 D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\mkspecs\features\exclusive_builds_post.prf:
 D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\mkspecs\features\default_post.prf:
+D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\mkspecs\features\win32\console.prf:
 D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\mkspecs\features\win32\rtti.prf:
 D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\mkspecs\features\precompile_header.prf:
 D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\mkspecs\features\warn_on.prf:
@@ -311,14 +310,11 @@ D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\mkspecs\features\resources.prf:
 D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\mkspecs\features\moc.prf:
 D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\mkspecs\features\win32\opengl.prf:
 D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\mkspecs\features\uic.prf:
-D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\mkspecs\features\win32\windows.prf:
 D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\mkspecs\features\testcase_targets.prf:
 D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\mkspecs\features\exceptions.prf:
 D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\mkspecs\features\yacc.prf:
 D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\mkspecs\features\lex.prf:
 ..\FinalHomework\FinalHomework.pro:
-D:/Qt/Qt5.4.1/5.4/msvc2012_opengl/lib/qtmaind.prl:
-D:/Qt/Qt5.4.1/5.4/msvc2012_opengl/lib/Qt5Cored.prl:
 D:/Qt/Qt5.4.1/5.4/msvc2012_opengl/lib/Qt5Widgets.prl:
 D:/Qt/Qt5.4.1/5.4/msvc2012_opengl/lib/Qt5Gui.prl:
 D:/Qt/Qt5.4.1/5.4/msvc2012_opengl/lib/Qt5Core.prl:

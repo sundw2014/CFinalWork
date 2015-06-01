@@ -11,9 +11,21 @@ typedef struct WorkerInfo
 }WorkerInfo;
 /***********************************************************************/
 
+/****************search function***************/
+extern unsigned char searchFlag;
+#define NameFlag    0x40
+#define JobFlag     0x20
+#define GenderFlag  0x10
+#define AgeFlag     0x08
+#define DegreeFlag  0x04
+#define MajorFlag   0x02
+#define NumFlag     0x01
+/**********************************************/
+
 extern WorkerInfo *HEAD[10],*tempNode;
 
-unsigned char WriteToFile(WorkerInfo *worker);
+unsigned char WriteToFile1(WorkerInfo *worker);
+unsigned char ReadFromFile1(WorkerInfo *worker,int n);
 
 #endif // MYFUNCTIONS
 

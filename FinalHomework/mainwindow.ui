@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>433</width>
-    <height>488</height>
+    <width>652</width>
+    <height>377</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,12 +22,12 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>431</width>
+      <width>641</width>
       <height>311</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="input">
      <attribute name="title">
@@ -236,18 +236,16 @@
      <widget class="QLabel" name="label_16">
       <property name="geometry">
        <rect>
-        <x>210</x>
-        <y>70</y>
-        <width>181</width>
-        <height>81</height>
+        <x>220</x>
+        <y>0</y>
+        <width>411</width>
+        <height>231</height>
        </rect>
       </property>
       <property name="font">
        <font>
         <family>3ds Light</family>
-        <pointsize>22</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
+        <pointsize>72</pointsize>
        </font>
       </property>
       <property name="text">
@@ -325,7 +323,7 @@
       <property name="geometry">
        <rect>
         <x>70</x>
-        <y>140</y>
+        <y>50</y>
         <width>113</width>
         <height>20</height>
        </rect>
@@ -335,7 +333,7 @@
       <property name="geometry">
        <rect>
         <x>70</x>
-        <y>200</y>
+        <y>80</y>
         <width>113</width>
         <height>20</height>
        </rect>
@@ -345,7 +343,7 @@
       <property name="geometry">
        <rect>
         <x>70</x>
-        <y>170</y>
+        <y>110</y>
         <width>113</width>
         <height>20</height>
        </rect>
@@ -355,7 +353,7 @@
       <property name="geometry">
        <rect>
         <x>70</x>
-        <y>110</y>
+        <y>140</y>
         <width>113</width>
         <height>20</height>
        </rect>
@@ -365,7 +363,7 @@
       <property name="geometry">
        <rect>
         <x>70</x>
-        <y>50</y>
+        <y>170</y>
         <width>113</width>
         <height>20</height>
        </rect>
@@ -414,7 +412,7 @@
       <property name="geometry">
        <rect>
         <x>70</x>
-        <y>80</y>
+        <y>200</y>
         <width>113</width>
         <height>20</height>
        </rect>
@@ -436,17 +434,28 @@
      <widget class="QLabel" name="label_15">
       <property name="geometry">
        <rect>
-        <x>240</x>
+        <x>190</x>
         <y>20</y>
-        <width>141</width>
-        <height>201</height>
+        <width>421</width>
+        <height>241</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>3ds Light</family>
+       </font>
       </property>
       <property name="text">
        <string/>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
      </widget>
      <widget class="QPushButton" name="pushButton_5">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
       <property name="geometry">
        <rect>
         <x>110</x>
@@ -482,7 +491,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>433</width>
+     <width>652</width>
      <height>23</height>
     </rect>
    </property>

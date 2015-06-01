@@ -82,12 +82,12 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
         MainWindow->setEnabled(true);
-        MainWindow->resize(433, 488);
+        MainWindow->resize(652, 377);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         tabWidget = new QTabWidget(centralWidget);
         tabWidget->setObjectName(QStringLiteral("tabWidget"));
-        tabWidget->setGeometry(QRect(0, 0, 431, 311));
+        tabWidget->setGeometry(QRect(0, 0, 641, 311));
         input = new QWidget();
         input->setObjectName(QStringLiteral("input"));
         label = new QLabel(input);
@@ -143,12 +143,10 @@ public:
         pushButton_3->setGeometry(QRect(210, 250, 101, 23));
         label_16 = new QLabel(input);
         label_16->setObjectName(QStringLiteral("label_16"));
-        label_16->setGeometry(QRect(210, 70, 181, 81));
+        label_16->setGeometry(QRect(220, 0, 411, 231));
         QFont font;
         font.setFamily(QStringLiteral("3ds Light"));
-        font.setPointSize(22);
-        font.setBold(true);
-        font.setWeight(75);
+        font.setPointSize(72);
         label_16->setFont(font);
         tabWidget->addTab(input, QString());
         search = new QWidget();
@@ -170,19 +168,19 @@ public:
         label_10->setGeometry(QRect(20, 20, 31, 21));
         lineEdit_9 = new QLineEdit(search);
         lineEdit_9->setObjectName(QStringLiteral("lineEdit_9"));
-        lineEdit_9->setGeometry(QRect(70, 140, 113, 20));
+        lineEdit_9->setGeometry(QRect(70, 50, 113, 20));
         lineEdit_10 = new QLineEdit(search);
         lineEdit_10->setObjectName(QStringLiteral("lineEdit_10"));
-        lineEdit_10->setGeometry(QRect(70, 200, 113, 20));
+        lineEdit_10->setGeometry(QRect(70, 80, 113, 20));
         lineEdit_11 = new QLineEdit(search);
         lineEdit_11->setObjectName(QStringLiteral("lineEdit_11"));
-        lineEdit_11->setGeometry(QRect(70, 170, 113, 20));
+        lineEdit_11->setGeometry(QRect(70, 110, 113, 20));
         lineEdit_12 = new QLineEdit(search);
         lineEdit_12->setObjectName(QStringLiteral("lineEdit_12"));
-        lineEdit_12->setGeometry(QRect(70, 110, 113, 20));
+        lineEdit_12->setGeometry(QRect(70, 140, 113, 20));
         lineEdit_13 = new QLineEdit(search);
         lineEdit_13->setObjectName(QStringLiteral("lineEdit_13"));
-        lineEdit_13->setGeometry(QRect(70, 50, 113, 20));
+        lineEdit_13->setGeometry(QRect(70, 170, 113, 20));
         label_11 = new QLabel(search);
         label_11->setObjectName(QStringLiteral("label_11"));
         label_11->setGeometry(QRect(20, 110, 31, 21));
@@ -194,15 +192,20 @@ public:
         label_13->setGeometry(QRect(20, 210, 54, 12));
         lineEdit_14 = new QLineEdit(search);
         lineEdit_14->setObjectName(QStringLiteral("lineEdit_14"));
-        lineEdit_14->setGeometry(QRect(70, 80, 113, 20));
+        lineEdit_14->setGeometry(QRect(70, 200, 113, 20));
         label_14 = new QLabel(search);
         label_14->setObjectName(QStringLiteral("label_14"));
         label_14->setGeometry(QRect(20, 80, 31, 21));
         label_15 = new QLabel(search);
         label_15->setObjectName(QStringLiteral("label_15"));
-        label_15->setGeometry(QRect(240, 20, 141, 201));
+        label_15->setGeometry(QRect(190, 20, 421, 241));
+        QFont font1;
+        font1.setFamily(QStringLiteral("3ds Light"));
+        label_15->setFont(font1);
+        label_15->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
         pushButton_5 = new QPushButton(search);
         pushButton_5->setObjectName(QStringLiteral("pushButton_5"));
+        pushButton_5->setEnabled(false);
         pushButton_5->setGeometry(QRect(110, 250, 75, 23));
         tabWidget->addTab(search, QString());
         Offer = new QWidget();
@@ -217,7 +220,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 433, 23));
+        menuBar->setGeometry(QRect(0, 0, 652, 23));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -234,7 +237,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
