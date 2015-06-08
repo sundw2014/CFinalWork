@@ -13,6 +13,8 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QComboBox>
+#include <QtWidgets/QFrame>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
@@ -67,10 +69,26 @@ public:
     QLineEdit *lineEdit_14;
     QLabel *label_14;
     QLabel *label_15;
+    QWidget *tab;
+    QFrame *frame;
     QPushButton *pushButton_5;
-    QWidget *Offer;
+    QComboBox *comboBox;
+    QLabel *label_18;
+    QLineEdit *lineEdit_15;
+    QLabel *label_17;
+    QLabel *label_20;
+    QFrame *frame_2;
+    QLabel *label_19;
+    QPushButton *pushButton_6;
     QWidget *Hot;
+    QPushButton *pushButton_7;
+    QLabel *label_21;
     QWidget *Sim;
+    QFrame *frame_3;
+    QPushButton *pushButton_8;
+    QLabel *label_22;
+    QFrame *frame_4;
+    QWidget *tab_2;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -87,7 +105,7 @@ public:
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         tabWidget = new QTabWidget(centralWidget);
         tabWidget->setObjectName(QStringLiteral("tabWidget"));
-        tabWidget->setGeometry(QRect(0, 0, 641, 311));
+        tabWidget->setGeometry(QRect(0, 0, 651, 331));
         input = new QWidget();
         input->setObjectName(QStringLiteral("input"));
         label = new QLabel(input);
@@ -203,20 +221,87 @@ public:
         font1.setFamily(QStringLiteral("3ds Light"));
         label_15->setFont(font1);
         label_15->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
-        pushButton_5 = new QPushButton(search);
-        pushButton_5->setObjectName(QStringLiteral("pushButton_5"));
-        pushButton_5->setEnabled(false);
-        pushButton_5->setGeometry(QRect(110, 250, 75, 23));
         tabWidget->addTab(search, QString());
-        Offer = new QWidget();
-        Offer->setObjectName(QStringLiteral("Offer"));
-        tabWidget->addTab(Offer, QString());
+        tab = new QWidget();
+        tab->setObjectName(QStringLiteral("tab"));
+        frame = new QFrame(tab);
+        frame->setObjectName(QStringLiteral("frame"));
+        frame->setGeometry(QRect(0, 0, 281, 301));
+        frame->setFrameShape(QFrame::StyledPanel);
+        frame->setFrameShadow(QFrame::Raised);
+        pushButton_5 = new QPushButton(frame);
+        pushButton_5->setObjectName(QStringLiteral("pushButton_5"));
+        pushButton_5->setGeometry(QRect(70, 210, 141, 41));
+        QFont font2;
+        font2.setFamily(QStringLiteral("3ds Light"));
+        font2.setPointSize(20);
+        pushButton_5->setFont(font2);
+        comboBox = new QComboBox(frame);
+        comboBox->setObjectName(QStringLiteral("comboBox"));
+        comboBox->setGeometry(QRect(170, 30, 69, 22));
+        label_18 = new QLabel(frame);
+        label_18->setObjectName(QStringLiteral("label_18"));
+        label_18->setGeometry(QRect(10, 130, 121, 31));
+        label_18->setFont(font2);
+        lineEdit_15 = new QLineEdit(frame);
+        lineEdit_15->setObjectName(QStringLiteral("lineEdit_15"));
+        lineEdit_15->setGeometry(QRect(150, 130, 111, 31));
+        label_17 = new QLabel(frame);
+        label_17->setObjectName(QStringLiteral("label_17"));
+        label_17->setGeometry(QRect(10, 20, 131, 41));
+        label_17->setFont(font2);
+        label_20 = new QLabel(frame);
+        label_20->setObjectName(QStringLiteral("label_20"));
+        label_20->setGeometry(QRect(10, 160, 101, 16));
+        QFont font3;
+        font3.setFamily(QStringLiteral("3ds Light"));
+        font3.setPointSize(11);
+        label_20->setFont(font3);
+        frame_2 = new QFrame(tab);
+        frame_2->setObjectName(QStringLiteral("frame_2"));
+        frame_2->setGeometry(QRect(280, 0, 361, 291));
+        frame_2->setFrameShape(QFrame::StyledPanel);
+        frame_2->setFrameShadow(QFrame::Raised);
+        label_19 = new QLabel(frame_2);
+        label_19->setObjectName(QStringLiteral("label_19"));
+        label_19->setGeometry(QRect(23, 20, 311, 191));
+        pushButton_6 = new QPushButton(frame_2);
+        pushButton_6->setObjectName(QStringLiteral("pushButton_6"));
+        pushButton_6->setGeometry(QRect(110, 210, 141, 41));
+        pushButton_6->setFont(font2);
+        tabWidget->addTab(tab, QString());
         Hot = new QWidget();
         Hot->setObjectName(QStringLiteral("Hot"));
+        pushButton_7 = new QPushButton(Hot);
+        pushButton_7->setObjectName(QStringLiteral("pushButton_7"));
+        pushButton_7->setGeometry(QRect(90, 240, 75, 23));
+        label_21 = new QLabel(Hot);
+        label_21->setObjectName(QStringLiteral("label_21"));
+        label_21->setGeometry(QRect(210, 20, 381, 281));
         tabWidget->addTab(Hot, QString());
         Sim = new QWidget();
         Sim->setObjectName(QStringLiteral("Sim"));
+        frame_3 = new QFrame(Sim);
+        frame_3->setObjectName(QStringLiteral("frame_3"));
+        frame_3->setGeometry(QRect(0, 0, 321, 301));
+        frame_3->setFrameShape(QFrame::StyledPanel);
+        frame_3->setFrameShadow(QFrame::Raised);
+        pushButton_8 = new QPushButton(frame_3);
+        pushButton_8->setObjectName(QStringLiteral("pushButton_8"));
+        pushButton_8->setGeometry(QRect(80, 230, 141, 61));
+        pushButton_8->setFont(font2);
+        label_22 = new QLabel(frame_3);
+        label_22->setObjectName(QStringLiteral("label_22"));
+        label_22->setGeometry(QRect(20, 10, 281, 211));
+        frame_4 = new QFrame(Sim);
+        frame_4->setObjectName(QStringLiteral("frame_4"));
+        frame_4->setGeometry(QRect(320, 0, 321, 301));
+        frame_4->setFrameShape(QFrame::StyledPanel);
+        frame_4->setFrameShadow(QFrame::Raised);
         tabWidget->addTab(Sim, QString());
+        tab_2 = new QWidget();
+        tab_2->setObjectName(QStringLiteral("tab_2"));
+        tabWidget->addTab(tab_2, QString());
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -237,7 +322,8 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
+        comboBox->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -255,7 +341,7 @@ public:
         pushButton->setText(QApplication::translate("MainWindow", "\345\275\225\345\205\245", 0));
         pushButton_2->setText(QApplication::translate("MainWindow", "\351\207\215\346\226\260\350\276\223\345\205\245", 0));
         label_7->setText(QApplication::translate("MainWindow", "\347\274\226\345\217\267", 0));
-        pushButton_3->setText(QApplication::translate("MainWindow", "\347\224\237\346\210\220\345\217\257\347\224\250\347\274\226\345\217\267", 0));
+        pushButton_3->setText(QApplication::translate("MainWindow", "\347\224\237\346\210\220\345\217\257\347\224\250\346\225\260\346\215\256", 0));
         label_16->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(input), QApplication::translate("MainWindow", "\345\275\225\345\205\245", 0));
         pushButton_4->setText(QApplication::translate("MainWindow", "\346\237\245\350\257\242", 0));
@@ -267,11 +353,34 @@ public:
         label_13->setText(QApplication::translate("MainWindow", "\347\274\226\345\217\267", 0));
         label_14->setText(QApplication::translate("MainWindow", "<html><head/><body><p>\346\200\247\345\210\253</p><p><br/></p></body></html>", 0));
         label_15->setText(QString());
-        pushButton_5->setText(QApplication::translate("MainWindow", "\346\237\245\346\211\276\344\270\213\344\270\200\344\270\252", 0));
         tabWidget->setTabText(tabWidget->indexOf(search), QApplication::translate("MainWindow", "\346\237\245\350\257\242", 0));
-        tabWidget->setTabText(tabWidget->indexOf(Offer), QApplication::translate("MainWindow", "\345\275\223\346\234\210\345\272\224\350\201\230\344\272\272\346\225\260\346\237\245\350\257\242", 0));
+        pushButton_5->setText(QApplication::translate("MainWindow", "\346\226\260\345\242\236", 0));
+        comboBox->clear();
+        comboBox->insertItems(0, QStringList()
+         << QApplication::translate("MainWindow", "\344\274\232\350\256\241", 0)
+         << QApplication::translate("MainWindow", "\347\273\217\347\220\206", 0)
+         << QApplication::translate("MainWindow", "\346\212\200\346\234\257\345\221\230", 0)
+         << QApplication::translate("MainWindow", "\347\255\226\345\210\222", 0)
+         << QApplication::translate("MainWindow", "\346\226\207\346\241\210", 0)
+         << QApplication::translate("MainWindow", "\345\207\272\347\272\263", 0)
+         << QApplication::translate("MainWindow", "\347\247\230\344\271\246", 0)
+         << QApplication::translate("MainWindow", "\345\216\250\345\270\210", 0)
+         << QApplication::translate("MainWindow", "\351\241\276\351\227\256", 0)
+         << QApplication::translate("MainWindow", "\345\220\216\345\213\244", 0)
+        );
+        label_18->setText(QApplication::translate("MainWindow", "\346\226\260\345\242\236\344\272\272\346\225\260", 0));
+        label_17->setText(QApplication::translate("MainWindow", "\351\200\211\346\213\251\345\262\227\344\275\215", 0));
+        label_20->setText(QApplication::translate("MainWindow", "\357\274\210\345\217\257\344\270\272\350\264\237\345\200\274\357\274\211", 0));
+        label_19->setText(QString());
+        pushButton_6->setText(QApplication::translate("MainWindow", "\346\237\245\350\257\242", 0));
+        tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "\345\275\223\346\234\210\345\272\224\350\201\230\344\272\272\346\225\260\350\276\223\345\205\245&&\346\237\245\350\257\242", 0));
+        pushButton_7->setText(QApplication::translate("MainWindow", "\347\273\237\350\256\241", 0));
+        label_21->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(Hot), QApplication::translate("MainWindow", "\345\262\227\344\275\215\347\203\255\345\272\246\347\273\237\350\256\241", 0));
+        pushButton_8->setText(QApplication::translate("MainWindow", "\345\274\200\345\247\213\346\265\201\345\212\250", 0));
+        label_22->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(Sim), QApplication::translate("MainWindow", "\344\272\272\345\221\230\346\265\201\345\212\250\346\250\241\346\213\237", 0));
+        tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("MainWindow", "\351\241\265", 0));
         toolBar->setWindowTitle(QApplication::translate("MainWindow", "toolBar", 0));
         toolBar_2->setWindowTitle(QApplication::translate("MainWindow", "toolBar_2", 0));
     } // retranslateUi

@@ -281,6 +281,8 @@ debug\moc_mainwindow.cpp: D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtWidgets\QM
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtGui\qtouchdevice.h \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtWidgets\qtabwidget.h \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtGui\qicon.h \
+		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtCore\Qtime \
+		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtCore\qdatetime.h \
 		..\FinalHomework\mainwindow.h
 	D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\bin\moc.exe $(DEFINES) -D_MSC_VER=1700 -D_WIN32 -ID:/Qt/Qt5.4.1/5.4/msvc2012_opengl/mkspecs/win32-msvc2012 -IE:/Qtproject/FinalHomework -ID:/Qt/Qt5.4.1/5.4/msvc2012_opengl/include -ID:/Qt/Qt5.4.1/5.4/msvc2012_opengl/include/QtWidgets -ID:/Qt/Qt5.4.1/5.4/msvc2012_opengl/include/QtGui -ID:/Qt/Qt5.4.1/5.4/msvc2012_opengl/include/QtCore -I. ..\FinalHomework\mainwindow.h -o debug\moc_mainwindow.cpp
 
@@ -410,6 +412,8 @@ debug\main.obj: ..\FinalHomework\main.cpp ..\FinalHomework\mainwindow.h \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtGui\qtouchdevice.h \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtWidgets\qtabwidget.h \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtGui\qicon.h \
+		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtCore\Qtime \
+		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtCore\qdatetime.h \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtWidgets\QApplication \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtWidgets\qapplication.h \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtCore\qcoreapplication.h \
@@ -524,6 +528,8 @@ debug\mainwindow.obj: ..\FinalHomework\mainwindow.cpp ..\FinalHomework\mainwindo
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtGui\qtouchdevice.h \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtWidgets\qtabwidget.h \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtGui\qicon.h \
+		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtCore\Qtime \
+		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtCore\qdatetime.h \
 		ui_mainwindow.h \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtCore\QVariant \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtWidgets\QAction \
@@ -538,13 +544,8 @@ debug\mainwindow.obj: ..\FinalHomework\mainwindow.cpp ..\FinalHomework\mainwindo
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtGui\qinputmethod.h \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtWidgets\QButtonGroup \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtWidgets\qbuttongroup.h \
-		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtWidgets\QHeaderView \
-		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtWidgets\qheaderview.h \
-		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtWidgets\qabstractitemview.h \
-		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtWidgets\qabstractscrollarea.h \
-		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtWidgets\qframe.h \
-		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtCore\qabstractitemmodel.h \
-		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtCore\qitemselectionmodel.h \
+		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtWidgets\QComboBox \
+		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtWidgets\qcombobox.h \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtWidgets\qabstractitemdelegate.h \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtWidgets\qstyleoption.h \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtWidgets\qabstractspinbox.h \
@@ -555,6 +556,14 @@ debug\mainwindow.obj: ..\FinalHomework\mainwindow.cpp ..\FinalHomework\mainwindo
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtWidgets\qstyle.h \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtWidgets\qtabbar.h \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtWidgets\qrubberband.h \
+		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtWidgets\qframe.h \
+		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtCore\qabstractitemmodel.h \
+		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtWidgets\QFrame \
+		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtWidgets\QHeaderView \
+		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtWidgets\qheaderview.h \
+		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtWidgets\qabstractitemview.h \
+		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtWidgets\qabstractscrollarea.h \
+		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtCore\qitemselectionmodel.h \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtWidgets\QLabel \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtWidgets\qlabel.h \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtWidgets\QLineEdit \
@@ -686,7 +695,9 @@ debug\myfunctions.obj: ..\FinalHomework\myfunctions.cpp ..\FinalHomework\myfunct
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtGui\qvector2d.h \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtGui\qtouchdevice.h \
 		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtWidgets\qtabwidget.h \
-		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtGui\qicon.h
+		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtGui\qicon.h \
+		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtCore\Qtime \
+		D:\Qt\Qt5.4.1\5.4\msvc2012_opengl\include\QtCore\qdatetime.h
 
 debug\moc_mainwindow.obj: debug\moc_mainwindow.cpp 
 
