@@ -1,4 +1,4 @@
-#include "mainwindow.h"
+﻿#include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "myfunctions.h"
 #include<QTextCodec>
@@ -99,30 +99,30 @@ MainWindow::~MainWindow()
 
 //     qDebug("%s",tr(tempNode->job));
 //     qDebug("%s",textcod ->fromUnicode("会计"));
-       if(!strcmp(tempNode->job,textcod ->fromUnicode("会计")))
+       if(!strcmp(tempNode->job,textcod ->fromUnicode(Q(L"会计"))))
                  tempNode->jobID=0;
-       if(!strcmp(tempNode->job,textcod ->fromUnicode("经理")))
+       if(!strcmp(tempNode->job,textcod ->fromUnicode(Q(L"经理"))))
                  tempNode->jobID=1;
-       if(!strcmp(tempNode->job,textcod ->fromUnicode("技术员")))
+       if(!strcmp(tempNode->job,textcod ->fromUnicode(Q(L"技术员"))))
                  tempNode->jobID=2;
-       if(!strcmp(tempNode->job,textcod ->fromUnicode("策划")))
+       if(!strcmp(tempNode->job,textcod ->fromUnicode(Q(L"策划"))))
                  tempNode->jobID=3;
-       if(!strcmp(tempNode->job,textcod ->fromUnicode("文案")))
+       if(!strcmp(tempNode->job,textcod ->fromUnicode(Q(L"文案"))))
                  tempNode->jobID=4;
-       if(!strcmp(tempNode->job,textcod ->fromUnicode("出纳")))
+       if(!strcmp(tempNode->job,textcod ->fromUnicode(Q(L"出纳"))))
                  tempNode->jobID=5;
-       if(!strcmp(tempNode->job,textcod ->fromUnicode("秘书")))
+       if(!strcmp(tempNode->job,textcod ->fromUnicode(Q(L"秘书"))))
                  tempNode->jobID=6;
-       if(!strcmp(tempNode->job,textcod ->fromUnicode("厨师")))
+       if(!strcmp(tempNode->job,textcod ->fromUnicode(Q(L"厨师"))))
                  tempNode->jobID=7;
-       if(!strcmp(tempNode->job,textcod ->fromUnicode("顾问")))
+       if(!strcmp(tempNode->job,textcod ->fromUnicode(Q(L"顾问"))))
                  tempNode->jobID=8;
-       if(!strcmp(tempNode->job,textcod ->fromUnicode("后勤")))
+       if(!strcmp(tempNode->job,textcod ->fromUnicode(Q(L"后勤"))))
                  tempNode->jobID=9;
 
 //       if(!strcmp(tempNode->job,textcod ->fromUnicode(ui->lineEdit->text())))
 //           qDebug("okokok++++++++++++++++++++++++++++++");
-       //qDebug("%d",tempNode->jobID);
+       qDebug("%d",tempNode->jobID);
 
 //   switch (tempNode->job)
 //   {
@@ -162,13 +162,13 @@ MainWindow::~MainWindow()
 //   }
     switch (WriteToFile1(tempNode)) {
     case 3:
-        ui->label_16->setText("写入成功");
+        ui->label_16->setText(Q(L"写入成功"));
         break;
     case 2:
-        ui->label_16->setText("文件无法打开");
+        ui->label_16->setText(Q(L"文件无法打开"));
         break;
     case 1:
-        ui->label_16->setText("写入失败");
+        ui->label_16->setText(Q(L"写入失败"));
         break;
     default:
         break;
@@ -229,7 +229,7 @@ void MainWindow::on_pushButton_4_clicked()
         searchFlag|=NumFlag;
 
     currentWorker=(WorkerInfo *)malloc(sizeof(WorkerInfo));
-    ui->label_15->setText("");
+    ui->textBrowser->setText("");
     qDebug("searchFlag=%d",searchFlag);
     while(1)
     {
@@ -237,12 +237,12 @@ void MainWindow::on_pushButton_4_clicked()
         unsigned char status;
         if((status=ReadFromFile1(currentWorker,workerCNT))==2)
         {
-            ui->label_15->setText(ui->label_15->text()+"文件打开失败");
+            ui->textBrowser->setText(ui->textBrowser->toPlainText()+Q(L"文件打开失败"));
             break;
         }
         else if(status==1)
         {
-            ui->label_15->setText(ui->label_15->text()+"end");
+            ui->textBrowser->setText(ui->textBrowser->toPlainText()+"end");
             break;
         }
         if(!(searchFlag & NameFlag))
@@ -274,7 +274,7 @@ void MainWindow::on_pushButton_4_clicked()
                   Flag|=NumFlag;
         qDebug("%d",Flag);
         if(Flag==0x7F)
-        ui->label_15->setText(ui->label_15->text()+textcod->toUnicode(currentWorker->name)+textcod->toUnicode(currentWorker->job)+textcod->toUnicode(currentWorker->gender)+textcod->toUnicode(currentWorker->age)+textcod->toUnicode(currentWorker->degree)+textcod->toUnicode(currentWorker->major)+textcod->toUnicode(currentWorker->num)+'\n');
+         ui->textBrowser->setText(ui->textBrowser->toPlainText()+textcod->toUnicode(currentWorker->name)+textcod->toUnicode(currentWorker->job)+textcod->toUnicode(currentWorker->gender)+textcod->toUnicode(currentWorker->age)+textcod->toUnicode(currentWorker->degree)+textcod->toUnicode(currentWorker->major)+textcod->toUnicode(currentWorker->num)+'\n');
         workerCNT++;
     }
     free(currentWorker);
@@ -290,12 +290,12 @@ void MainWindow::on_pushButton_5_clicked()
     {
         numOfEmp[ui->comboBox->currentIndex()]+=ui->lineEdit_15->text().toInt();
         if(WriteToFile2(numOfEmp,FOROFFER)!=3)
-            ui->label_19->setText("写入失败");
+            ui->label_19->setText(Q(L"写入失败"));
     }
     else if(status==1)
-        ui->label_19->setText("读取失败");
+        ui->label_19->setText(Q(L"读取失败"));
     else if(status==2)
-        ui->label_19->setText("打开文件失败");
+        ui->label_19->setText(Q(L"打开文件失败"));
     MainWindow::on_pushButton_6_clicked();
 }
 
@@ -306,23 +306,23 @@ void MainWindow::on_pushButton_6_clicked()
 
     if((status=ReadFromFile2(numOfEmp,FOROFFER))==3)
     {
-        ui->label_19->setText("会计   "+QString::number(numOfEmp[0])+'\n'
-                +"经理   "+QString::number(numOfEmp[1])+'\n'+"技术员 "+QString::number(numOfEmp[2])+'\n'+"策划   "
-                +QString::number(numOfEmp[3])+'\n'+"文案   "+QString::number(numOfEmp[4])+'\n'+"出纳   "+QString::number(numOfEmp[5])
-                +'\n'+"秘书   "+QString::number(numOfEmp[6])+'\n'+"厨师   "+QString::number(numOfEmp[7])+'\n'
-                +"后勤   "+QString::number(numOfEmp[8])+'\n'+"顾问   "+QString::number(numOfEmp[9])+'\n');
+        ui->label_19->setText(Q(L"会计   ")+QString::number(numOfEmp[0])+'\n'
+                +Q(L"经理   ")+QString::number(numOfEmp[1])+'\n'+Q(L"技术员 ")+QString::number(numOfEmp[2])+'\n'+Q(L"策划   ")
+                +QString::number(numOfEmp[3])+'\n'+Q(L"文案   ")+QString::number(numOfEmp[4])+'\n'+Q(L"出纳   ")+QString::number(numOfEmp[5])
+                +'\n'+Q(L"秘书   ")+QString::number(numOfEmp[6])+'\n'+Q(L"厨师   ")+QString::number(numOfEmp[7])+'\n'
+                +Q(L"后勤   ")+QString::number(numOfEmp[8])+'\n'+Q(L"顾问   ")+QString::number(numOfEmp[9])+'\n');
     }
 
     else if(status==1)
-        ui->label_19->setText("读取失败");
+        ui->label_19->setText(Q(L"读取失败"));
     else if(status==2)
-        ui->label_19->setText("打开文件失败");
+        ui->label_19->setText(Q(L"打开文件失败"));
 
 }
 
 void MainWindow::on_pushButton_7_clicked()
 {
-    QString name[10]={"会计","经理","技术员","策划","文案","出纳","秘书","厨师","后勤","顾问"},strPrint;
+    QString name[10]={Q(L"会计"),Q(L"经理"),Q(L"技术员"),Q(L"策划"),Q(L"文案"),Q(L"出纳"),Q(L"秘书"),Q(L"厨师"),Q(L"后勤"),Q(L"顾问")},strPrint;
     Job *HEAD=(Job *)malloc(sizeof(Job)),*tempNode,*curSor=HEAD;
 
     qDebug("%d",sizeof(Job));
@@ -364,9 +364,9 @@ void MainWindow::on_pushButton_7_clicked()
     }
 
     else if(status==1)
-        ui->label_21->setText("读取失败");
+        ui->label_21->setText(Q(L"读取失败"));
     else if(status==2)
-        ui->label_21->setText("打开文件失败");
+        ui->label_21->setText(Q(L"打开文件失败"));
 
 
 }
@@ -375,7 +375,7 @@ void MainWindow::on_tabWidget_currentChanged(int index)
 {
     if(index==4)
     {
-        QString name[10]={"会计","经理","技术员","策划","文案","出纳","秘书","厨师","后勤","顾问"},strPrint;
+        QString name[10]={Q(L"会计"),Q(L"经理"),Q(L"技术员"),Q(L"策划"),Q(L"文案"),Q(L"出纳"),Q(L"秘书"),Q(L"厨师"),Q(L"后勤"),Q(L"顾问")},strPrint;
         Job *HEAD=(Job *)malloc(sizeof(Job)),*tempNode,*curSor=HEAD;
 
         int jobSize[10];
@@ -412,24 +412,64 @@ void MainWindow::on_tabWidget_currentChanged(int index)
               free(curSor);
               curSor=HEAD;
             }
+            for(int i=0;i<10;i++)
+            {
+                if(jobSize[i]<3)
+                {
+                    QMessageBox::warning(this,Q(L"警告"),name[i]+Q(L"已不足三人，请尽快招聘到位！"),QMessageBox::Yes);
+                }
+            }
         }
 
         else if(status==1)
-            ui->label_22->setText("读取失败");
+            ui->label_22->setText(Q(L"读取失败"));
         else if(status==2)
-            ui->label_22->setText("打开文件失败");
+            ui->label_22->setText(Q(L"打开文件失败"));
 
     }
-}
-
-void MainWindow::on_pushButton_8_clicked()
-{
-
 }
 
 void MainWindow::on_pushButton_9_clicked()
 {
 
+}
+
+void MainWindow::on_pushButton_8_clicked()
+{
+    std::string string1;
+    int length;
+
+    QString job[10]={Q(L"会计"),Q(L"经理"),Q(L"技术员"),Q(L"策划"),Q(L"文案"),Q(L"出纳"),Q(L"秘书"),Q(L"厨师"),Q(L"后勤"),Q(L"顾问")};
+    WorkerInfo *currentWorker;
+
+    unsigned char status;
+
+    //used to process string
+    currentWorker=(WorkerInfo *)malloc(sizeof(WorkerInfo));
+    QTextCodec *textcod = QTextCodec::codecForName("GBK");
+
+    for(int i=0;i<10;i++)
+    {
+        int workerCNT=0,changes=0;
+        int r1=qrand()%30;
+
+        while(((status=ReadFromFile1(currentWorker,workerCNT))==3)&&(changes<=r1))
+        {
+             if(!strcmp(currentWorker->job,textcod ->fromUnicode(job[i])))
+             {
+                 int r2=qrand()%10;
+                 string1 = textcod ->fromUnicode(job[r2]);
+                 length=string1.copy(currentWorker->job,string1.size(),0);
+                 currentWorker->job[length]='\0';
+                 currentWorker->jobID=r2;
+                 changes++;
+                 ChangeToFile1(currentWorker,workerCNT);
+             }
+             workerCNT++;
+        }
+    }
+    UpdateFile2();
+    MainWindow::on_tabWidget_currentChanged(4);
 }
 
 void MainWindow::on_pushButton_3_clicked()
@@ -447,13 +487,13 @@ void MainWindow::on_pushButton_3_clicked()
     int r6 = qrand()%21;
     int r7 = qrand();
     int r8=qrand()%10;
-    QString firstName[11]={"赵","钱","孙","南相","周","施","冯","上官","褚","诸葛","东方"};
-    QString lastName[13]={"乐","清海","之源","诗","远","明","仲远","少羽","嘉","尘","博","奇","琪","群"};
-    QString degree[7]={"初中","高中","大专","本科","硕士","博士","高职"};
-    QString major[9]={"web前端","运维","烹饪","机械","航空","飞行器设计","汽车","电子","电机"};
-    QString gender[2]={"男","女"};
+    QString firstName[11]={Q(L"赵"),Q(L"钱"),Q(L"孙"),Q(L"南相"),Q(L"周"),Q(L"施"),Q(L"冯"),Q(L"上官"),Q(L"褚"),Q(L"诸葛"),Q(L"东方")};
+    QString lastName[13]={Q(L"乐"),Q(L"清海"),Q(L"之源"),Q(L"诗"),Q(L"远"),Q(L"明"),Q(L"仲远"),Q(L"少羽"),Q(L"嘉"),Q(L"尘"),Q(L"博"),Q(L"奇"),Q(L"琪")};
+    QString degree[7]={Q(L"初中"),Q(L"高中"),Q(L"大专"),Q(L"本科"),Q(L"硕士"),Q(L"博士"),Q(L"高职")};
+    QString major[9]={Q(L"web前端"),Q(L"运维"),Q(L"烹饪"),Q(L"机械"),Q(L"航空"),Q(L"飞行器设计"),Q(L"汽车"),Q(L"电子"),Q(L"电机")};
+    QString gender[2]={Q(L"男"),Q(L"女")};
     QString age[21]={"25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45"};
-    QString job[10]={"会计","经理","技术员","策划","文案","出纳","秘书","厨师","后勤","顾问"};
+    QString job[10]={Q(L"会计"),Q(L"经理"),Q(L"技术员"),Q(L"策划"),Q(L"文案"),Q(L"出纳"),Q(L"秘书"),Q(L"厨师"),Q(L"后勤"),Q(L"顾问")};
     ui->lineEdit->setText(firstName[r1]+lastName[r2]);
     ui->lineEdit_2->setText(job[r8]);
     ui->lineEdit_3->setText(gender[r5]);

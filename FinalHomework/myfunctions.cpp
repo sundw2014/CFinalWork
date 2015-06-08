@@ -3,6 +3,21 @@
 unsigned char searchFlag;
 WorkerInfo *HEAD[10],*tempNode;
 
+unsigned char ChangeToFile1(WorkerInfo *woker,int n)
+{
+    FILE *fp;
+    if((fp = fopen("workers.db", "r+b")) == NULL)
+        return 2;
+    fseek(fp,n*sizeof(WorkerInfo),SEEK_SET);
+    if(fwrite(woker, sizeof(WorkerInfo), 1, fp) != 1)
+           {
+                fclose(fp);
+                return 1;
+           }
+    fclose(fp);
+    return 3;
+}
+
 unsigned char WriteToFile1(WorkerInfo *woker)
 {
     FILE *fp;

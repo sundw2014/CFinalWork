@@ -3,6 +3,9 @@
 
 #include <QMainWindow>
 #include <Qtime>
+#include <QMessageBox>
+
+#define Q QString::fromWCharArray
 
 namespace Ui {
 class MainWindow;

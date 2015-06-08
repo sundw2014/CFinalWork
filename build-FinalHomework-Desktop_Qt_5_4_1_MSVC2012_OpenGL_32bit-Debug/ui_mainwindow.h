@@ -23,6 +23,7 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
+#include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
@@ -68,6 +69,7 @@ public:
     QLabel *label_13;
     QLineEdit *lineEdit_14;
     QLabel *label_14;
+    QTextBrowser *textBrowser;
     QLabel *label_15;
     QWidget *tab;
     QFrame *frame;
@@ -88,7 +90,6 @@ public:
     QPushButton *pushButton_8;
     QLabel *label_22;
     QFrame *frame_4;
-    QWidget *tab_2;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -214,13 +215,12 @@ public:
         label_14 = new QLabel(search);
         label_14->setObjectName(QStringLiteral("label_14"));
         label_14->setGeometry(QRect(20, 80, 31, 21));
+        textBrowser = new QTextBrowser(search);
+        textBrowser->setObjectName(QStringLiteral("textBrowser"));
+        textBrowser->setGeometry(QRect(190, 10, 431, 281));
         label_15 = new QLabel(search);
         label_15->setObjectName(QStringLiteral("label_15"));
-        label_15->setGeometry(QRect(190, 20, 421, 241));
-        QFont font1;
-        font1.setFamily(QStringLiteral("3ds Light"));
-        label_15->setFont(font1);
-        label_15->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
+        label_15->setGeometry(QRect(0, 270, 121, 20));
         tabWidget->addTab(search, QString());
         tab = new QWidget();
         tab->setObjectName(QStringLiteral("tab"));
@@ -232,31 +232,31 @@ public:
         pushButton_5 = new QPushButton(frame);
         pushButton_5->setObjectName(QStringLiteral("pushButton_5"));
         pushButton_5->setGeometry(QRect(70, 210, 141, 41));
-        QFont font2;
-        font2.setFamily(QStringLiteral("3ds Light"));
-        font2.setPointSize(20);
-        pushButton_5->setFont(font2);
+        QFont font1;
+        font1.setFamily(QStringLiteral("3ds Light"));
+        font1.setPointSize(20);
+        pushButton_5->setFont(font1);
         comboBox = new QComboBox(frame);
         comboBox->setObjectName(QStringLiteral("comboBox"));
         comboBox->setGeometry(QRect(170, 30, 69, 22));
         label_18 = new QLabel(frame);
         label_18->setObjectName(QStringLiteral("label_18"));
         label_18->setGeometry(QRect(10, 130, 121, 31));
-        label_18->setFont(font2);
+        label_18->setFont(font1);
         lineEdit_15 = new QLineEdit(frame);
         lineEdit_15->setObjectName(QStringLiteral("lineEdit_15"));
         lineEdit_15->setGeometry(QRect(150, 130, 111, 31));
         label_17 = new QLabel(frame);
         label_17->setObjectName(QStringLiteral("label_17"));
         label_17->setGeometry(QRect(10, 20, 131, 41));
-        label_17->setFont(font2);
+        label_17->setFont(font1);
         label_20 = new QLabel(frame);
         label_20->setObjectName(QStringLiteral("label_20"));
         label_20->setGeometry(QRect(10, 160, 101, 16));
-        QFont font3;
-        font3.setFamily(QStringLiteral("3ds Light"));
-        font3.setPointSize(11);
-        label_20->setFont(font3);
+        QFont font2;
+        font2.setFamily(QStringLiteral("3ds Light"));
+        font2.setPointSize(11);
+        label_20->setFont(font2);
         frame_2 = new QFrame(tab);
         frame_2->setObjectName(QStringLiteral("frame_2"));
         frame_2->setGeometry(QRect(280, 0, 361, 291));
@@ -268,7 +268,7 @@ public:
         pushButton_6 = new QPushButton(frame_2);
         pushButton_6->setObjectName(QStringLiteral("pushButton_6"));
         pushButton_6->setGeometry(QRect(110, 210, 141, 41));
-        pushButton_6->setFont(font2);
+        pushButton_6->setFont(font1);
         tabWidget->addTab(tab, QString());
         Hot = new QWidget();
         Hot->setObjectName(QStringLiteral("Hot"));
@@ -289,7 +289,7 @@ public:
         pushButton_8 = new QPushButton(frame_3);
         pushButton_8->setObjectName(QStringLiteral("pushButton_8"));
         pushButton_8->setGeometry(QRect(80, 230, 141, 61));
-        pushButton_8->setFont(font2);
+        pushButton_8->setFont(font1);
         label_22 = new QLabel(frame_3);
         label_22->setObjectName(QStringLiteral("label_22"));
         label_22->setGeometry(QRect(20, 10, 281, 211));
@@ -299,9 +299,6 @@ public:
         frame_4->setFrameShape(QFrame::StyledPanel);
         frame_4->setFrameShadow(QFrame::Raised);
         tabWidget->addTab(Sim, QString());
-        tab_2 = new QWidget();
-        tab_2->setObjectName(QStringLiteral("tab_2"));
-        tabWidget->addTab(tab_2, QString());
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -322,7 +319,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(4);
         comboBox->setCurrentIndex(0);
 
 
@@ -352,7 +349,7 @@ public:
         label_12->setText(QApplication::translate("MainWindow", "<html><head/><body><p>\344\270\223\344\270\232</p></body></html>", 0));
         label_13->setText(QApplication::translate("MainWindow", "\347\274\226\345\217\267", 0));
         label_14->setText(QApplication::translate("MainWindow", "<html><head/><body><p>\346\200\247\345\210\253</p><p><br/></p></body></html>", 0));
-        label_15->setText(QString());
+        label_15->setText(QApplication::translate("MainWindow", "\357\274\210\346\255\244\346\223\215\344\275\234\350\276\203\350\264\271\346\227\266\351\227\264\357\274\211", 0));
         tabWidget->setTabText(tabWidget->indexOf(search), QApplication::translate("MainWindow", "\346\237\245\350\257\242", 0));
         pushButton_5->setText(QApplication::translate("MainWindow", "\346\226\260\345\242\236", 0));
         comboBox->clear();
@@ -380,7 +377,6 @@ public:
         pushButton_8->setText(QApplication::translate("MainWindow", "\345\274\200\345\247\213\346\265\201\345\212\250", 0));
         label_22->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(Sim), QApplication::translate("MainWindow", "\344\272\272\345\221\230\346\265\201\345\212\250\346\250\241\346\213\237", 0));
-        tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("MainWindow", "\351\241\265", 0));
         toolBar->setWindowTitle(QApplication::translate("MainWindow", "toolBar", 0));
         toolBar_2->setWindowTitle(QApplication::translate("MainWindow", "toolBar_2", 0));
     } // retranslateUi

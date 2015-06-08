@@ -3,7 +3,7 @@
 
 #include "qstring.h"
 #include "mainwindow.h"
-
+/*#include "warwindow.h"*/
 typedef struct WorkerInfo
 {
     char name[20],job[20],major[40],degree[20],num[20],gender[10],age[10];
@@ -20,6 +20,13 @@ typedef struct Job
     Job *next;
 
 }Job;
+
+//typedef struct WarWin
+//{
+//    WarWindow *dlg;
+//    WarWin *next;
+//}WarWin;
+
 /***********************************************************************/
 
 /****************search function***************/
@@ -44,6 +51,7 @@ unsigned char ReadFromFile2(int num[10],unsigned char dataFlag);
 unsigned char WriteToFile2(int num[10],unsigned char dataFlag);
 unsigned char UpdateFile2(void);
 void ListSort(Job *HEAD);
+unsigned char ChangeToFile1(WorkerInfo *woker,int n);
 
 #endif // MYFUNCTIONS
 
